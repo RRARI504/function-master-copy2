@@ -4,6 +4,7 @@
 
 function objectValues(object) {
     // code
+    return Object.values(object);
 } 
 
 //////////////////////////////////////////////////////////////////////
@@ -11,6 +12,8 @@ function objectValues(object) {
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+
+    return Object.keys()
 
 }
 
