@@ -50,6 +50,12 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
+    if(Array.isArray(collection)){
+        return 'array';
+    }else if(typeof collection === 'object' && typeof collection !== null){
+        return 'object';
+
+    }
     
 }
 
@@ -58,7 +64,11 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
+   
+    return string.charAt(0).toUpperCase() + string.slice(1);
+    //returns the first character of the string capitalized
+    //then uses .slice(1) to concatenate the rest of the string together.
+   
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -66,6 +76,20 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
+
+var split = string.split(' ')
+//set variable split = to the string.split() which divides input string into an array of words
+//seperated by spaces
+
+for(var i = 0; i < split.length; i++){
+//for loop that iterates positively over the now split words
+split[i] = split[i].charAt(0).toUpperCase() + split[i].slice(1).toLowerCase()
+//sets the current iteration of the string equal to split[i].charAt(0).toUpperCase()
+//which grabs the first index in the current iteration and upper cases it.
+// then concatenates with split[i].slice(1).toLowerCase()
+//which grabs the rest of the word at second index of the current iteration and lowercases it 
+}
+return split.join(' '); //returns the 
     
 }
 
