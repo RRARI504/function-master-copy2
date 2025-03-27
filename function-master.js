@@ -98,6 +98,11 @@ return split.join(' '); //returns the
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+    let name = object.name.charAt(0).toUpperCase() + object.name.slice(1).toLowerCase();
+    if(name){
+        return `Welcome ${name}!`
+
+    }
 
 }
 
@@ -106,7 +111,13 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+    let name = object.name.charAt(0).toUpperCase() + object.name.slice(1).toLowerCase();
+    let species = object.species.charAt(0).toUpperCase() + object.species.slice(1).toLowerCase();
 
+    if(object.name && object.species){
+        return `${name} is a ${species}`
+
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -114,6 +125,8 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
+
+    
 
 }
 
