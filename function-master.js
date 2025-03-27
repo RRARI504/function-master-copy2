@@ -13,7 +13,11 @@ function objectValues(object) {
 
 function keysToString(object) {
 
-    return Object.keys()
+    return Object.keys(object).toString().split(',').join(' ')
+    //Object.keys() returns the objects keys 
+    //.toString() returns the keys in a string sperated by commas
+    //.split(",") takes every string and puts them in an array seperated by "" and ,
+    //.join(" ") joins array back into a string w no seperator
 
 }
 
@@ -22,6 +26,22 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
+    let output = [];
+
+    for(var key in object){//standard for in loop to iterate over object properties, key represents current prop.
+
+        if(object.hasOwnProperty(key) && typeof object[key] === 'string'){
+            //if statement checks if object has the property of key which is
+            //the current prop and if the value current prop is equal to the type string
+            
+            output.push(object[key])
+            //if it is then push the current prop to the output array
+        }
+    }
+
+    return output.join(' ')//return the output and use .join to combine strings w a spce between them
+
+  
     
 }
 
