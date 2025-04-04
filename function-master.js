@@ -152,8 +152,14 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
-    
 
+    if(!object.friends){//if no friends prop exist on the object 
+        object.friends = []; //initiate the friends prop in the object as an empty array
+    }
+    object.friends.push(name)//push the name string to the friends prop array
+
+    return object;//return the object 
+  
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -161,14 +167,29 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
-
-}
+    let check = object.friends //set variable equal to accessing the array in the object
+    if(!check || !check.includes(name)){ //checks if the array in object exist
+       //or if it doesnt include the name given 
+       return false;//returns false
+     }else{
+       return true;//returns true
+    }
+  } 
 
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
+    let output = [];
+    for(var i = 0; i <+ array.length; i++){
+        if(){
+            
+        }
+
+    }
+
+
 
 }
 
