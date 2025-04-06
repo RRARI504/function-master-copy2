@@ -182,15 +182,20 @@ function isFriend(name, object) {
 
 function nonFriends(name, array) {
     let output = [];
-    for(var i = 0; i <+ array.length; i++){
-        if(){
-            
+    for(var i = 0; i < array.length; i++){
+        let person = array[i]
+        // set person equal to the current iteration and array
+        //now the name and friend props can be accessed with dot notation
+        if(person.name !== name && !person.friends.includes(name) ){
+            //if name prop in array not equal to name given
+            //and the frinends prop in the array doesnt include the name given
+            output.push(person.name)
+            //push the name prop to ouput
+
         }
 
     }
-
-
-
+    return output;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -198,8 +203,12 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
-
+   object[key] = value
+   //checks if key exist on object, if it exist update value 
+   //if it doesnt exist 
+   return object;
 }
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////

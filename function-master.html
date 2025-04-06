@@ -106,10 +106,26 @@
     /* global nonFriends */
     QUnit.test("nonFriends() : Should take a name and a list of people, and return a list of all the names that <name> is not friends with", function(assert){
       var data = [
-        {name: "Jimmy", friends:["Sara", "Liza"]},
-        {name: "Bob", friends:[]},
-        {name: "Liza", friends: ["Jimmy"]},
-        {name: "Sara", friends: ["Jimmy"]}
+        {
+          name: "Jimmy", 
+        friends:["Sara", "Liza"]
+      },
+
+        {
+          name: "Bob", 
+        friends:[]
+      },
+
+        {
+          name: "Liza",
+         friends: ["Jimmy"]
+        },
+
+        {
+          name: "Sara",
+         friends: ["Jimmy"]
+        }
+
       ];
       assert.deepEqual(nonFriends("Jimmy", data), ["Bob"]);
       assert.deepEqual(nonFriends("Bob", data), ["Jimmy", "Liza", "Sara"]);
