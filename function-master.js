@@ -215,6 +215,10 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
+    for(let key of array){//iterate over keys in the array
+        delete object[key]
+    }
+    return object;
 
 }
 
