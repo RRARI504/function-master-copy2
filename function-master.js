@@ -227,7 +227,14 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+    let output = [];
+    for(var i = 0; i < array.length; i++){
+        if (output.indexOf(array[i]) === -1) {
+            output.push(array[i]);
+        }  
 
+    }
+    return output;
 }
 
 //////////////////////////////////////////////////////////////////////
